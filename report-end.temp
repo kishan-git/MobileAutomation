@@ -1,0 +1,22 @@
+</table>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+  $("#demo").on("hide.bs.collapse", function(){
+	
+    $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> View Details');
+	
+  });
+  $("#demo").on("show.bs.collapse", function(){
+   
+    $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Collpase Details');
+	
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script href="<0>JSLOCATION<0>angular.js"></script>
+<script type="text/javascript" href="<0>JSLOCATION<0>jquery.min.js"></script>
+<script type="text/javascript" href="<0>JSLOCATION<0>jquery.jqplot.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<0>JSLOCATION<0>jquery.jqplot.min.css" />
+<link rel="stylesheet" type="text/css" href="<0>JSLOCATION<0>report.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="<0>JSLOCATION<0>bootstrap.min.css">
+<script src="<0>JSLOCATION<0>jquery.min.js"></script>
+<script src="<0>JSLOCATION<0>bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Prana Automation Report</h2>
+  <div id='summary_data'>
+						<table cellspacing='0' width='500px' style="float: left;">
+							<!-- cellspacing='0' is important, must stay -->
+							<tr>
+								<th colspan=2 align='center'>TEST SUMMARY</th>
+							</tr>
+							<!-- Table Header -->
+							<tr>
+								<td>Test Name</td>
+								<td ng-bind="result.status"><0>TESTNAME<0></td>
+							</tr>
+							<tr>
+								<td>Status</td>
+								<td ng-bind="result.status"><0>STATUS<0></td>
+							</tr>
+							<!-- Table Row -->
+							<tr>
+								<td>Steps Passed</td>
+								<td ng-bind="result.pass"><0>PASSCTR<0></td>
+							</tr>
+							<!-- Darker Table Row -->
+							<tr>
+								<td>Steps Failed</td>
+								<td ng-bind="result.fail"><0>FAILCTR<0></td>
+							</tr>
+							<tr>
+								
+								<td align='center'>
+								    <button type="button" class="btn btn-success" data-toggle="collapse" data-target="#demo">
+										<span class="glyphicon glyphicon-collapse-down"></span> View Details
+									</button>
+									
+								</td>
+								<td/>
+								
+								
+							</tr>
+
+						</table>
+					</div>
+				</div>
+			</div>
+
+<div id="demo" class="collapse">
+  
+		<div ng-app="app" >
+	
+		<div ng-controller="MainController">
+			<div id='report_screen'>
+				<div id='test_summary' style="width: 100%;">
+          <div id='consol_report_header' style="font-size:25px">
+             <div align='center' style="padding:10px;background:#CC9933" ng-bind="header"></div>
+          </div> 
+					
+			<div id='pass_report' style="width: 900px; float: left;">
+				<table cellspacing='0' width='900px'>
+					<!-- cellspacing='0' is important, must stay -->
+					<tr>
+						<th colspan=7 align='center'
+							style='background: gray; color: white;'>Test Steps</th>
+					</tr>
+					<!-- Table Header -->
+					<tr>
+						<th>TestStep</th>
+						<th>Operation</th>
+						<th>UIObject</th>
+						<th>Expected</th>
+						<th>Actual</th>
+						<th>Status</th>
+						<th>View Snapshot</th>
+					</tr>

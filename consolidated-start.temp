@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Prana Consolidated Test Summary Report</title>
+          <script src="<0>JSLOCATION<0>angular.js"></script>
+      		<script type="text/javascript" src="<0>JSLOCATION<0>jquery.min.js"></script>
+      		<script type="text/javascript" src="<0>JSLOCATION<0>jquery.jqplot.min.js"></script>
+      		<link rel="stylesheet" type="text/css" href="<0>JSLOCATION<0>jquery.jqplot.min.css" />
+          <link rel="stylesheet" type="text/css" href="<0>JSLOCATION<0>report.css" />
+      		<script type="text/javascript" >
+      		$(document).ready(function(){
+      		   var line1;
+line1 = [ [ 'Pass', 0 ], [ 'Fail',  1 ], [ 'Skip',  0 ] ]
+      		 
+      	     $('#chart3').jqplot([ line1 ], {
+  			     // Provide a custom seriesColors array to override the default colors.
+  			     seriesColors : [ 'Green', 'Red', 'Orange' ],
+  			     seriesDefaults : {
+  				    renderer : $.jqplot.BarRenderer,
+  				    rendererOptions : {
+  					   // Set varyBarColor to tru to use the custom colors on the bars.
+  					   varyBarColor : true
+  				    }
+  			     },
+  			   axes : {
+  				  xaxis : {
+  					 renderer : $.jqplot.CategoryAxisRenderer
+  				  }
+  			  }
+  		   });
+       });
+      </script>
+      <script language="javascript" type="text/javascript" src="D:\WorkSpace\prana\js\jqplot.categoryAxisRenderer.min.js"></script>
+      <script language="javascript" type="text/javascript" src="D:\WorkSpace\prana\js\jqplot.barRenderer.min.js"></script>
+  
+    </head>
+    <body>
+      <div ng-app="app">
+  	   <div ng-controller="MainController">
+        <div id='consolidate_report_screen'>
+          <div id='consol_test_summary' style="width:100%;">   
+           <div id='consol_report_header' style="padding:10px;background:#006699;color:white;font-size:25px">
+             <div align='center'><b>Prana Consolidated Test Summary Report</b></div>
+            </div>
+      		  <div id='consol_report_screen'>  
+             <div id='consol_test_report' style='padding-top:15px;width:40%; '>
+  				    <table cellspacing='0' style="float: left;">
+  					
+  					   <!-- Table Header -->
+  					    <tr>
+  						    <th>TestCase Name</th>
+                  <th>Status</th>
+                  <th>View Log</th>    						
+  					    </tr>
