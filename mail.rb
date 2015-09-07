@@ -74,7 +74,7 @@ def mailbody()
 
     filehandle.close
     mailbody = mailbody + "</table><br>"
-    sendmail("kishankumar83@gmail.com;rakesh408059@gmail.com;gregg@pranadiabetes.com","",mailbody)
+    sendmail("kishankumar83@gmail.com","",mailbody)
 end  
 
 
