@@ -33,11 +33,13 @@ Mail.deliver do
   
    subject "Prana UI Automation Report"
   
+   add_file(".\\Reports.zip") 
 
       html_part do
 
         content_type 'text/html; charset=UTF-8'
         body '<HTML><BODY><H4><font color="blue">Automation Run Status Report</font></H4>' + $mailbody + "<br><H4>Thanks,</H4><H4>Prana Automation Team</H4></BODY></HTML>"
+
       end   
       
       end
@@ -74,7 +76,7 @@ def mailbody()
 
     filehandle.close
     mailbody = mailbody + "</table><br>"
-    sendmail("kishankumar83@gmail.com","",mailbody)
+    sendmail("kishankumar83@gmail.com;rakesh408059@gmail.com","",mailbody)
 end  
 
 
