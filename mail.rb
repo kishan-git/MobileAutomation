@@ -33,7 +33,7 @@ Mail.deliver do
   
    subject "Prana UI Automation Report"
   
-   add_file(".\\Reports.zip") 
+   add_file("Reports.zip") 
 
       html_part do
 
